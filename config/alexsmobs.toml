@@ -1,0 +1,6 @@
+
+[general]
+	#Whether all players should get an Animal Dictionary when joining the world for the first time.
+	giveBookOnStartup = false
+
+

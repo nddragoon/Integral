@@ -1,0 +1,6 @@
+
+#General settings
+[general]
+	#Spawn a book in the players inventory on login
+	spawnBook = false
+
