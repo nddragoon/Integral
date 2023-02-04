@@ -1,0 +1,6 @@
+#Is the probe needed to show the tooltip? 0 = no, 1 = yes, 2 = yes and clients cannot override, 3 = probe needed for extended info only
+#Range: 0 ~ 3
+needsProbe = 0
+#If true there will be a readme note for first-time players
+spawnNote = false
+
