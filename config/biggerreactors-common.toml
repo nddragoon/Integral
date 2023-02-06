@@ -1,0 +1,6 @@
+[WorldGen]
+    #
+    # Default: true
+    #
+    EnableUraniumGeneration = false
+

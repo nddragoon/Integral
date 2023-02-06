@@ -1,0 +1,28 @@
+
+[ores]
+	#Ore generation config - bauxite
+	[ores.bauxite]
+		#The maximum size of a vein. Set to 0 to disable generation
+		#Range: > 0
+		vein_size = 0
+
+	#Ore generation config - lead
+	[ores.lead]
+		vein_size = 0
+
+	#Ore generation config - silver
+	[ores.silver]
+		vein_size = 0
+
+	#Ore generation config - nickel
+	[ores.nickel]
+		#The maximum size of a vein. Set to 0 to disable generation
+		#Range: > 0
+		vein_size = 0
+
+	#Ore generation config - deep_nickel
+	[ores.deep_nickel]
+		#The maximum size of a vein. Set to 0 to disable generation
+		#Range: > 0
+		vein_size = 0
+

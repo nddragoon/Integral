@@ -1,0 +1,16 @@
+
+#World generation settings for Mekanism. This config is synced from server to client
+[world_generation]
+	#Generation Settings for tin ore.
+	[world_generation.tin]
+		#Determines if tin ore should be added to world generation.
+		shouldGenerate = false
+	#Generation Settings for uranium ore.
+	[world_generation.uranium]
+		#Determines if uranium ore should be added to world generation.
+		shouldGenerate = false
+	#Generation Settings for lead ore.
+	[world_generation.lead]
+		#Determines if lead ore should be added to world generation.
+		shouldGenerate = false
+

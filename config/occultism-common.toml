@@ -1,0 +1,17 @@
+
+#WorldGen Settings
+[worldgen]
+
+	#Ore Gen Settings
+	[worldgen.oregen]
+
+		#Ore Settings
+		[worldgen.oregen.silverOre]
+			#True to generate this ore.
+			generateOre = false
+
+		#Ore Settings
+		[worldgen.oregen.silverOreDeepslate]
+			#True to generate this ore.
+			generateOre = false
+
