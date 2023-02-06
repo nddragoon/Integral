@@ -1,0 +1,7 @@
+
+[Visuals]
+	#
+	# Should blue skies override the title screen panorama.
+	# Default: true
+	custom_panorama = false
+
