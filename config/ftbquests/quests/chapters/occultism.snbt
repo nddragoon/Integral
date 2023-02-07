@@ -1,0 +1,599 @@
+{
+	id: "6298BAFC066582B1"
+	group: "435489E67F4F7721"
+	order_index: 0
+	filename: "occultism"
+	title: "Occultism"
+	icon: "occultism:ritual_dummy/custom_ritual"
+	subtitle: ["\"The newest fad among the youth: summoning demons through the game known as Minecraft. More at 11.\""]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Occultism"
+			icon: {
+				id: "occultism:dictionary_of_spirits"
+				Count: 1b
+				tag: {
+					"modonomicon:book_id": "occultism:dictionary_of_spirits"
+				}
+			}
+			x: 0.0d
+			y: 0.0d
+			shape: "gear"
+			description: [
+				"Occultism is a magic mod about using demons to do your bidding."
+				""
+				"Here, you will find hidden secrets throughout the world you hadn't noticed before, draw pentacles to perform specialized rituals, summon demon helpers to automate tasks, bind demons into items to give them magical properties, and more."
+				""
+				"The Dictionary of Spirits is a great guide. It contains lots of ingame info and lore for the mod, along with stuff like how to build the pentacles you'll need. Use it!"
+			]
+			size: 2.0d
+			id: "12BD7D306A9E31CF"
+			tasks: [{
+				id: "28886B147043D8FB"
+				type: "item"
+				item: {
+					id: "occultism:dictionary_of_spirits"
+					Count: 1b
+					tag: {
+						"modonomicon:book_id": "occultism:dictionary_of_spirits"
+					}
+				}
+			}]
+		}
+		{
+			title: "Datura"
+			x: -2.0d
+			y: 0.0d
+			subtitle: "First demons, now hallucinogens? Scandalous."
+			description: ["The first thing you'll need to do is obtain and plant some Demon's Dream Seeds."]
+			dependencies: ["12BD7D306A9E31CF"]
+			id: "1F96C78D53F78CDF"
+			tasks: [
+				{
+					id: "439F5711DFBA8548"
+					type: "item"
+					item: "occultism:datura_seeds"
+				}
+				{
+					id: "09A5E45C1A08D503"
+					type: "item"
+					item: "occultism:datura"
+				}
+			]
+			rewards: [{
+				id: "04FD43C3EA615745"
+				type: "item"
+				item: "occultism:datura"
+				count: 5
+			}]
+		}
+		{
+			x: 0.0d
+			y: -2.0d
+			description: [
+				"Normally found in the Other Place, Spirit Fire can be created by setting a Demon's Dream Fruit on fire."
+				""
+				"It doesn't deal damage to living beings, but it can transmute certain objects into their otherworldly equivalents."
+			]
+			dependencies: ["1F96C78D53F78CDF"]
+			id: "6324BDA2592F828A"
+			tasks: [{
+				id: "44FE8B7CEE3AC350"
+				type: "observation"
+				title: "Observe Spirit Fire"
+				icon: "occultism:spirit_fire"
+				timer: 0L
+				observe_type: 0
+				to_observe: "occultism:spirit_fire"
+			}]
+			rewards: [{
+				id: "0C4CA4F617A9F881"
+				type: "item"
+				item: "occultism:datura"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 0.0d
+			description: [
+				"The divination rod can be attuned to blocks to find others like them. Shift-right-click on a block to attune to it, hold right click to search for it, press right click to highlight the last block you found again."
+				""
+				"The nearest block of the attuned type will be highlighted with a white box. The rod itself will turn more purple the closer you are to the searched block."
+				""
+				"Some blocks have special behaviors with the rod, and will search for their Otherworld variant instead:"
+				"- Andesite: Otherstone"
+				"- Oak Log: Otherworld Wood"
+				"- Oak Leaves: Otherworld Leaves"
+				"- Netherrack: Iesnium Ore"
+			]
+			dependencies: ["6324BDA2592F828A"]
+			id: "6F52AFED78DCFF33"
+			tasks: [{
+				id: "06BFECC09F7568F8"
+				type: "item"
+				item: {
+					id: "occultism:divination_rod"
+					Count: 1b
+					tag: { }
+				}
+				match_nbt: false
+			}]
+			rewards: [
+				{
+					id: "0439C6B019F7809F"
+					type: "item"
+					item: "minecraft:oak_log"
+				}
+				{
+					id: "6683032CC62B7F24"
+					type: "item"
+					item: "minecraft:andesite"
+				}
+			]
+		}
+		{
+			title: "Otherworld Materials"
+			x: 0.0d
+			y: 2.0d
+			description: [
+				"Using your Divination Rod, you can find Otherworld Groves, small caves filled with disguised otherworldly materials, which can only be harvested with the Third Eye effect given by eating Demon's Dream Fruit."
+				""
+				"The natural saplings can be replanted, and harvested with Third Eye, but player-grown Otherworld Trees can't drop saplings, so make sure to keep one for later."
+			]
+			dependencies: ["6F52AFED78DCFF33"]
+			id: "23BE338CFDB94A5E"
+			tasks: [
+				{
+					id: "3AEA225E8FDCF5B2"
+					type: "item"
+					item: "occultism:otherstone"
+				}
+				{
+					id: "520B3B3B96770775"
+					type: "item"
+					item: "occultism:otherworld_log"
+				}
+				{
+					id: "40DBDB5B69D9AEDC"
+					type: "item"
+					item: {
+						id: "occultism:otherworld_sapling_natural"
+						Count: 1b
+						tag: { }
+					}
+				}
+			]
+			rewards: [
+				{
+					id: "21FFBCC23D521AD5"
+					type: "item"
+					item: {
+						id: "occultism:otherworld_sapling_natural"
+						Count: 1b
+						tag: { }
+					}
+					count: 4
+				}
+				{
+					id: "41783F0407ECA7F6"
+					type: "item"
+					item: "occultism:otherstone"
+					count: 16
+					random_bonus: 16
+				}
+			]
+		}
+		{
+			x: -1.5d
+			y: 2.0d
+			description: ["Obtained by throwing Otherworld Wood in Spirit Fire."]
+			dependencies: ["23BE338CFDB94A5E"]
+			id: "541B6930FB1DBDF8"
+			tasks: [{
+				id: "0E99F9A53D84701C"
+				type: "item"
+				item: "occultism:otherworld_ashes"
+				count: 3L
+			}]
+			rewards: [{
+				id: "641BB9EE3A058FD4"
+				type: "item"
+				item: "occultism:otherworld_log"
+				count: 3
+				random_bonus: 3
+			}]
+		}
+		{
+			x: 0.0d
+			y: 3.5d
+			description: ["Made by smelting Otherstone."]
+			dependencies: ["23BE338CFDB94A5E"]
+			id: "38E9927CA46881FC"
+			tasks: [{
+				id: "76AFD3E0AB70FD2F"
+				type: "item"
+				item: "occultism:burnt_otherstone"
+			}]
+			rewards: [{
+				id: "71D4281405488AE0"
+				type: "item"
+				item: "occultism:otherstone"
+				count: 4
+				random_bonus: 4
+			}]
+		}
+		{
+			x: 1.5d
+			y: 3.5d
+			description: [
+				"The Golden Sacrificial Bowl is the heart of a pentacle, used to activate a ritual."
+				"Sacrificial Bowls are used to hold ritual ingredients."
+			]
+			dependencies: ["23BE338CFDB94A5E"]
+			id: "095A538F6F58AAF4"
+			tasks: [
+				{
+					id: "675A8BAB68D9E447"
+					type: "item"
+					item: "occultism:sacrificial_bowl"
+				}
+				{
+					id: "2780DA8B89E53972"
+					type: "item"
+					item: "occultism:golden_sacrificial_bowl"
+				}
+			]
+		}
+		{
+			x: -1.5d
+			y: 3.5d
+			description: ["Chalks are the main component in drawing Pentacles, the circles used to perform rituals. Just a couple more steps and you'll be able to summon your first demons."]
+			dependencies: [
+				"38E9927CA46881FC"
+				"541B6930FB1DBDF8"
+			]
+			id: "167040B1F8789645"
+			tasks: [{
+				id: "3261C05D3E781744"
+				type: "item"
+				item: {
+					id: "occultism:chalk_white"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			x: -1.5d
+			y: 6.5d
+			description: ["The butcher knife will drop Tallow when killing animals. Candles made from it are needed for most pentacles."]
+			id: "363CC77EEF0472F4"
+			tasks: [
+				{
+					id: "5EE197D3AEC991EC"
+					type: "item"
+					item: {
+						id: "occultism:butcher_knife"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "02BBCD027F54D29B"
+					type: "item"
+					item: "occultism:candle_white"
+				}
+			]
+			rewards: [{
+				id: "6FBA8C0DD775D8DF"
+				type: "item"
+				item: "occultism:candle_white"
+				count: 3
+			}]
+		}
+		{
+			title: "Your First Ritual"
+			icon: "occultism:ritual_dummy/custom_ritual"
+			x: 0.0d
+			y: 5.0d
+			description: [
+				"You now have all the tools to draw your first pentacle and perform your first ritual."
+				""
+				"The first pentacle you have access to is Aviar's Circle. You can find the design for any pentacle in the \"Pentacles\" tab of your Dictionary of Spirits, and find the requirements for any ritual on REI."
+				""
+				"Sacrificial Bowls can be placed anywhere within 8 blocks of the center of the pentacle. Their location or the order you place the items in doesn't matter. To perform a ritual, first place the required items on the bowls and then place the central item on the golden bowl. Note that some rituals will need other conditions like the use of an item or killing of a mob around them, if this is the case they will emit gray particles until the condition is met."
+				""
+				"With Aviar's Circle, you can summon several different very useful types of Foliots:"
+				"- Crusher: doubles ores"
+				"- Lumberjack: chops down trees in an area"
+				"- Janitor: picks up items in an area"
+				"- Transporter: moves items between containers"
+				"- Sapling Trader: trades natural Otherworld Saplings for stable ones which can be harvested without Third Eye and drop themselves (told you to keep one of those saplings)"
+				"- Otherstone Trader: trades stone for Otherstone"
+				""
+				"Note: Foliots (the lowest tier of spirit) have a property named \"spirit decay\". They cannot hold on to this world for long and will disappear after a certain time. Higher order spirits can exist indefinitely."
+				""
+				"(sorry about the wall of text, have a tater <3 )"
+			]
+			dependencies: [
+				"363CC77EEF0472F4"
+				"167040B1F8789645"
+				"00CD14B0895FDD5C"
+				"095A538F6F58AAF4"
+			]
+			id: "7AFBFE5F152913E1"
+			tasks: [{
+				id: "092A9B83864700B3"
+				type: "checkmark"
+			}]
+			rewards: [
+				{
+					id: "2F9B3CD0EFE8322B"
+					type: "item"
+					item: "occultism:book_of_binding_foliot"
+				}
+				{
+					id: "196598CB3546BF9A"
+					type: "item"
+					item: "minecraft:baked_potato"
+				}
+			]
+		}
+		{
+			x: 1.5d
+			y: 6.5d
+			description: ["Almost every ritual needs a bound Book of Binding of a specific type. You can bind a book by combining it with your Dictionary of Spirits in a crafting grid. (The name of the spirit doesn't matter for the ritual)"]
+			hide_dependency_lines: true
+			dependencies: ["6324BDA2592F828A"]
+			id: "00CD14B0895FDD5C"
+			tasks: [{
+				id: "792E3DDCF124BE32"
+				type: "item"
+				item: {
+					id: "occultism:book_of_binding_bound_foliot"
+					Count: 1b
+					tag: {
+						spiritName: "Zedircred"
+					}
+				}
+				match_nbt: false
+			}]
+			rewards: [{
+				id: "6B05A65E9CB74610"
+				type: "item"
+				item: "minecraft:feather"
+				count: 2
+			}]
+		}
+		{
+			title: "Books of Calling"
+			x: 1.5d
+			y: 5.0d
+			description: ["Certain spirits do a job in a certain area or involving certain inventories. These spirits will always spawn with a Book of Calling to configure their jobs and easily move the spirit around. The books can also be crafted in case you lose one."]
+			dependencies: ["7AFBFE5F152913E1"]
+			id: "5BD7EFA2BF72D562"
+			tasks: [{
+				id: "026743105E4F3479"
+				type: "item"
+				title: "Any #kubejs:books_of_calling"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "kubejs:books_of_calling"
+					}
+				}
+				match_nbt: false
+			}]
+			rewards: [{
+				id: "7A4F3B7C396C443C"
+				type: "item"
+				item: "occultism:book_of_binding_foliot"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 5.0d
+			description: ["The chalk brush allows you to easily remove chalk."]
+			dependencies: ["167040B1F8789645"]
+			id: "32D95F155D281824"
+			tasks: [{
+				id: "4EC89A4709754804"
+				type: "item"
+				item: "occultism:brush"
+			}]
+			rewards: [{
+				id: "24AE640718349525"
+				type: "item"
+				item: "minecraft:sponge"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 9.5d
+			description: ["Now you have access to Hedyrin's Lure, unlocking the ability to make a Foliot possess certain beings."]
+			dependencies: ["7AFBFE5F152913E1"]
+			id: "6CE842278330E462"
+			tasks: [{
+				id: "5D8B64611DD9CC41"
+				type: "item"
+				item: {
+					id: "occultism:chalk_gold"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "2C6C80D89075BFED"
+				type: "item"
+				item: "occultism:candle_white"
+				random_bonus: 1
+			}]
+		}
+		{
+			title: "Greedy Familiar"
+			x: -1.5d
+			y: 8.0d
+			description: ["Greedy Familiars pick up items for their master. When stored in a Familiar Ring, they increase the pickup range (like an item magnet)"]
+			dependencies: ["6CE842278330E462"]
+			id: "513C156CAD4C20F5"
+			tasks: [{
+				id: "55DB5FF75B7EDAD5"
+				type: "advancement"
+				title: "Summon a Greedy Familiar"
+				advancement: "occultism:occultism/familiar_greedy"
+				criterion: ""
+			}]
+		}
+		{
+			title: "Possessed Endermite"
+			x: 0.0d
+			y: 11.0d
+			description: ["The Possessed Endermite is always guaranteed to drop at least one End Stone. No need to do a whole trip to the End (even though I'm sure you've killed the dragon by now, right? ;) )"]
+			dependencies: ["6CE842278330E462"]
+			optional: true
+			id: "6CD1B9303D71E96D"
+			tasks: [
+				{
+					id: "76CA319419B5EFA4"
+					type: "advancement"
+					title: "Summon a Possessed Endermite"
+					advancement: "occultism:occultism/possess_endermite"
+					criterion: ""
+				}
+				{
+					id: "0D8F1D957FD925DC"
+					type: "item"
+					item: "minecraft:end_stone"
+				}
+				{
+					id: "532DFCA9D3437C1D"
+					type: "item"
+					item: "occultism:crushed_end_stone"
+				}
+			]
+			rewards: [{
+				id: "097906265B90D63C"
+				type: "item"
+				item: "minecraft:end_stone"
+				count: 8
+				random_bonus: 8
+			}]
+		}
+		{
+			title: "Deer Familiar"
+			x: -1.5d
+			y: 9.5d
+			description: ["Deer Familiars provide jump boost to their master."]
+			dependencies: ["6CE842278330E462"]
+			id: "003516C4A63AE053"
+			tasks: [{
+				id: "3375CD02F80B425F"
+				type: "advancement"
+				title: "Summon a Deer Familiar"
+				advancement: "occultism:occultism/familiar_deer"
+				criterion: ""
+			}]
+		}
+		{
+			title: "Parrot Familiar"
+			x: -1.5d
+			y: 11.0d
+			description: ["Friendly parrot :)"]
+			dependencies: ["6CE842278330E462"]
+			id: "270E5F8A6F59B38A"
+			tasks: [{
+				id: "3FFC8C3D6446A3AB"
+				type: "advancement"
+				title: "Summon a Parrot Familiar"
+				advancement: "occultism:occultism/familiar_parrot"
+				criterion: ""
+			}]
+		}
+		{
+			title: "Blacksmith Familiar"
+			x: 1.5d
+			y: 8.0d
+			description: ["The Blacksmith Familiar takes stone their master mines and uses it to repair equipment."]
+			dependencies: ["6CE842278330E462"]
+			id: "0449814F7FF4B25F"
+			tasks: [{
+				id: "79281A679D6D4F17"
+				type: "advancement"
+				title: "Summon a Blacksmith Familiar"
+				advancement: "occultism:occultism/familiar_blacksmith"
+				criterion: ""
+			}]
+		}
+		{
+			title: "Beaver Familiar"
+			x: 1.5d
+			y: 9.5d
+			description: ["The Beaver Familiar increases woodcutting speed for their master and harvests nearby trees when they grow from a sapling."]
+			dependencies: ["6CE842278330E462"]
+			id: "37D92064036368D3"
+			tasks: [{
+				id: "2F8F6CB869B7787F"
+				type: "advancement"
+				title: "Summon a Beaver Familiar"
+				advancement: "occultism:occultism/familiar_beaver"
+				criterion: ""
+			}]
+		}
+		{
+			title: "Possessed Skeleton"
+			x: 1.5d
+			y: 11.0d
+			description: ["Will always drop at least one skull."]
+			dependencies: ["6CE842278330E462"]
+			id: "14E1B4894AE3726C"
+			tasks: [
+				{
+					id: "74CDA5F4518F15B7"
+					type: "advancement"
+					title: "Summon a Possessed Skeleton"
+					advancement: "occultism:occultism/possess_skeleton"
+					criterion: ""
+				}
+				{
+					id: "311102A0B7728F29"
+					type: "item"
+					item: "minecraft:skeleton_skull"
+				}
+			]
+			rewards: [{
+				id: "38955133992A72A0"
+				type: "item"
+				item: "minecraft:skeleton_skull"
+				random_bonus: 2
+			}]
+		}
+		{
+			x: 0.0d
+			y: 14.0d
+			subtitle: "Here's where it really gets going"
+			dependencies: ["6CD1B9303D71E96D"]
+			id: "7FAD4AA917B61916"
+			tasks: [{
+				id: "4CD0759834771722"
+				type: "item"
+				item: {
+					id: "occultism:chalk_purple"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+	]
+	quest_links: [ ]
+}

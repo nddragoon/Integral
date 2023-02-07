@@ -1,0 +1,81 @@
+{
+	id: "7F81CA5BE4020C7D"
+	group: ""
+	order_index: 0
+	filename: "welcome"
+	title: "Welcome"
+	icon: "ftbquests:book"
+	subtitle: ["Introduction"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Welcome to Integral"
+			icon: "minecraft:egg"
+			x: 0.0d
+			y: 0.0d
+			shape: "gear"
+			description: [
+				"Welcome!"
+				""
+				"Integral is a kitchensink modpack focused on variety, polish, and letting every mod shine. This means avoiding mechanics that trivialize interesting features of another mod and encourage you to fully dive into every mod to reach the end goals of the pack."
+				""
+				"It's a pack somewhat born of annoyances that inevitably arise in almost every pack I've tried; poor optimization, lack of small polish and integration, closed source, making things so overwhelmingly better than others that some mods end up irrelevant, lack of goals, etc. It has made it hard for me to really find a pack to sink my teeth into. This pack will try to avoid those pitfalls, and I hope others will enjoy it too."
+				""
+				"I truly hope you have a great time and take your time to explore all the wonderful mods here."
+				""
+				"Off you go!"
+			]
+			size: 2.0d
+			id: "0075E64C810DF2D1"
+			tasks: [{
+				id: "317C518362A6DC68"
+				type: "dimension"
+				dimension: "minecraft:overworld"
+			}]
+			rewards: [
+				{
+					id: "0739213E82B5DA59"
+					type: "item"
+					item: "minecraft:baked_potato"
+					count: 16
+				}
+				{
+					id: "2337F8535F5EA8A4"
+					type: "item"
+					item: {
+						id: "minecraft:stone_sword"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: 2.0d
+			subtitle: "funne book"
+			description: [
+				"The Eccentric Tome you spawned with (should) contain every mod guide, readme, dictionary, manual, or any wacky unique thing a mod might wanna call its ingame wiki."
+				"You can select which book to transform it into from its UI, and then put it back by punching the air with it. You can also take books out of it by selecting a book and pressing Q while crouched."
+			]
+			dependencies: ["0075E64C810DF2D1"]
+			id: "5F016677BA16F635"
+			tasks: [{
+				id: "4AF9B535E39E9198"
+				type: "item"
+				item: {
+					id: "eccentrictome:tome"
+					Count: 1b
+					tag: {
+						"eccentrictome:mods": { }
+					}
+				}
+				match_nbt: false
+			}]
+		}
+	]
+	quest_links: [ ]
+}
