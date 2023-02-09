@@ -268,8 +268,8 @@
 			}]
 		}
 		{
-			x: -1.5d
-			y: 6.5d
+			x: 1.5d
+			y: 5.0d
 			description: ["The butcher knife will drop Tallow when killing animals. Candles made from it are needed for most pentacles."]
 			id: "363CC77EEF0472F4"
 			tasks: [
@@ -301,13 +301,15 @@
 			title: "Your First Ritual"
 			icon: "occultism:ritual_dummy/custom_ritual"
 			x: 0.0d
-			y: 5.0d
+			y: 6.5d
 			description: [
 				"You now have all the tools to draw your first pentacle and perform your first ritual."
 				""
 				"The first pentacle you have access to is Aviar's Circle. You can find the design for any pentacle in the \"Pentacles\" tab of your Dictionary of Spirits, and find the requirements for any ritual on REI."
 				""
 				"Sacrificial Bowls can be placed anywhere within 8 blocks of the center of the pentacle. Their location or the order you place the items in doesn't matter. To perform a ritual, first place the required items on the bowls and then place the central item on the golden bowl. Note that some rituals will need other conditions like the use of an item or killing of a mob around them, if this is the case they will emit gray particles until the condition is met."
+				""
+				"This questbook includes images to help you build pentacles (see below). Keep in mind the variant of every chalk glyph you use doesn't matter, but you can cycle between them by right clicking them with the chalk again."
 				""
 				"With Aviar's Circle, you can summon several different very useful types of Foliots:"
 				"- Crusher: doubles ores"
@@ -320,13 +322,9 @@
 				"Note: Foliots (the lowest tier of spirit) have a property named \"spirit decay\". They cannot hold on to this world for long and will disappear after a certain time. Higher order spirits can exist indefinitely."
 				""
 				"(sorry about the wall of text, have a tater <3 )"
+				"{image:modpack:textures/quests/occultism/aviars_circle.png width:100 height:100 align:1 fit:true}"
 			]
-			dependencies: [
-				"363CC77EEF0472F4"
-				"167040B1F8789645"
-				"00CD14B0895FDD5C"
-				"095A538F6F58AAF4"
-			]
+			dependencies: ["0523E99C86FF127F"]
 			id: "7AFBFE5F152913E1"
 			tasks: [{
 				id: "092A9B83864700B3"
@@ -373,8 +371,8 @@
 		}
 		{
 			title: "Books of Calling"
-			x: 1.5d
-			y: 5.0d
+			x: -1.5d
+			y: 6.5d
 			description: ["Certain spirits do a job in a certain area or involving certain inventories. These spirits will always spawn with a Book of Calling to configure their jobs and easily move the spirit around. The books can also be crafted in case you lose one."]
 			dependencies: ["7AFBFE5F152913E1"]
 			id: "5BD7EFA2BF72D562"
@@ -417,7 +415,6 @@
 		{
 			x: 0.0d
 			y: 9.5d
-			description: ["Now you have access to Hedyrin's Lure, unlocking the ability to make a Foliot possess certain beings."]
 			dependencies: ["7AFBFE5F152913E1"]
 			id: "6CE842278330E462"
 			tasks: [{
@@ -440,10 +437,16 @@
 		}
 		{
 			title: "Greedy Familiar"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "occultism:textures/item/advancement/greedy_icon.png"
+				}
+			}
 			x: -1.5d
-			y: 8.0d
+			y: 11.0d
 			description: ["Greedy Familiars pick up items for their master. When stored in a Familiar Ring, they increase the pickup range (like an item magnet)"]
-			dependencies: ["6CE842278330E462"]
 			id: "513C156CAD4C20F5"
 			tasks: [{
 				id: "55DB5FF75B7EDAD5"
@@ -456,9 +459,8 @@
 		{
 			title: "Possessed Endermite"
 			x: 0.0d
-			y: 11.0d
+			y: 14.0d
 			description: ["The Possessed Endermite is always guaranteed to drop at least one End Stone. No need to do a whole trip to the End (even though I'm sure you've killed the dragon by now, right? ;) )"]
-			dependencies: ["6CE842278330E462"]
 			optional: true
 			id: "6CD1B9303D71E96D"
 			tasks: [
@@ -490,10 +492,16 @@
 		}
 		{
 			title: "Deer Familiar"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "occultism:textures/item/advancement/deer_icon.png"
+				}
+			}
 			x: -1.5d
-			y: 9.5d
+			y: 12.5d
 			description: ["Deer Familiars provide jump boost to their master."]
-			dependencies: ["6CE842278330E462"]
 			id: "003516C4A63AE053"
 			tasks: [{
 				id: "3375CD02F80B425F"
@@ -502,13 +510,24 @@
 				advancement: "occultism:occultism/familiar_deer"
 				criterion: ""
 			}]
+			rewards: [{
+				id: "59BCB1C68AE7F55A"
+				type: "item"
+				item: "minecraft:rabbit_foot"
+			}]
 		}
 		{
 			title: "Parrot Familiar"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "occultism:textures/gui/book/parrot.png"
+				}
+			}
 			x: -1.5d
-			y: 11.0d
+			y: 14.0d
 			description: ["Friendly parrot :)"]
-			dependencies: ["6CE842278330E462"]
 			id: "270E5F8A6F59B38A"
 			tasks: [{
 				id: "3FFC8C3D6446A3AB"
@@ -517,13 +536,25 @@
 				advancement: "occultism:occultism/familiar_parrot"
 				criterion: ""
 			}]
+			rewards: [{
+				id: "27798AEB0EAE1626"
+				type: "item"
+				item: "minecraft:wheat_seeds"
+				count: 4
+			}]
 		}
 		{
 			title: "Blacksmith Familiar"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "occultism:textures/item/advancement/blacksmith_icon.png"
+				}
+			}
 			x: 1.5d
-			y: 8.0d
+			y: 11.0d
 			description: ["The Blacksmith Familiar takes stone their master mines and uses it to repair equipment."]
-			dependencies: ["6CE842278330E462"]
 			id: "0449814F7FF4B25F"
 			tasks: [{
 				id: "79281A679D6D4F17"
@@ -535,10 +566,16 @@
 		}
 		{
 			title: "Beaver Familiar"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "occultism:textures/item/advancement/beaver_icon.png"
+				}
+			}
 			x: 1.5d
-			y: 9.5d
+			y: 12.5d
 			description: ["The Beaver Familiar increases woodcutting speed for their master and harvests nearby trees when they grow from a sapling."]
-			dependencies: ["6CE842278330E462"]
 			id: "37D92064036368D3"
 			tasks: [{
 				id: "2F8F6CB869B7787F"
@@ -547,13 +584,17 @@
 				advancement: "occultism:occultism/familiar_beaver"
 				criterion: ""
 			}]
+			rewards: [{
+				id: "441A33DF48D55BCD"
+				type: "item"
+				item: "biomesoplenty:rainbow_birch_sapling"
+			}]
 		}
 		{
 			title: "Possessed Skeleton"
 			x: 1.5d
-			y: 11.0d
-			description: ["Will always drop at least one skull."]
-			dependencies: ["6CE842278330E462"]
+			y: 14.0d
+			description: ["Will always drop at least one skull. Useful for building pentacles."]
 			id: "14E1B4894AE3726C"
 			tasks: [
 				{
@@ -578,7 +619,7 @@
 		}
 		{
 			x: 0.0d
-			y: 14.0d
+			y: 17.0d
 			subtitle: "Here's where it really gets going"
 			dependencies: ["6CD1B9303D71E96D"]
 			id: "7FAD4AA917B61916"
@@ -592,6 +633,53 @@
 						Damage: 0
 					}
 				}
+			}]
+		}
+		{
+			title: "Ophyx' Calling"
+			x: -3.0d
+			y: 17.0d
+			description: [
+				"Allows for the summoning of Djinni."
+				"{image:modpack:textures/quests/occultism/ophyx_calling.png width:100 height:100 align:1 fit:true}"
+			]
+			id: "3FE102820F81F045"
+			tasks: [{
+				id: "3CB94DB879F5F49F"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "Hedyrin's Lure"
+			x: 0.0d
+			y: 12.5d
+			id: "28D6AA70CCD9CAA1"
+			tasks: [{
+				id: "73AD73D76D91D1F0"
+				type: "checkmark"
+			}]
+		}
+		{
+			title: "A primer on rituals"
+			icon: {
+				id: "ftbquests:custom_icon"
+				Count: 1b
+				tag: {
+					Icon: "pneumaticcraft:textures/gui/icon/gui_info.png"
+				}
+			}
+			x: 0.0d
+			y: 5.0d
+			dependencies: [
+				"363CC77EEF0472F4"
+				"095A538F6F58AAF4"
+				"167040B1F8789645"
+				"00CD14B0895FDD5C"
+			]
+			id: "0523E99C86FF127F"
+			tasks: [{
+				id: "710D7F9BE99BD6B9"
+				type: "checkmark"
 			}]
 		}
 	]
